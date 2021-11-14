@@ -1,5 +1,5 @@
 {
-  "name": "Api_consultorio",
+  "name": "api_pagamento",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -18,5 +18,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1"
-  }
+  },
+  "author": "NIlton <jnvlfilho@hotmail.com>"
 }
