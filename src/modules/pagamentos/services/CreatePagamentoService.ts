@@ -72,8 +72,8 @@ class CreatePagamentoService{
             valor_final,
             status_remessa,
             motivo,
-        })
-
+        });
+        
         await pagamentoRepository.save(pagamento);
 
         return pagamento;
