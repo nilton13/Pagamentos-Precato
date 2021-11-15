@@ -6,10 +6,11 @@ import { CredoresRepository } from "../typeorm/repositories/CredoresRepository";
 interface IRequest{
     name: string;
     cnpj: string;
+    status: string;
 }
 
 class CreateCredorService {
-    public async execute({ name,cnpj }: IRequest): Promise<Credor>{
+    public async execute({ name,cnpj,status }: IRequest): Promise<Credor>{
         const credorRepository = getCustomRepository(CredoresRepository);
 
         const credorExists = await credorRepository.findByCnpj(cnpj);
@@ -20,7 +21,8 @@ class CreateCredorService {
 
         const credor = credorRepository.create({
             name,
-            cnpj
+            cnpj,
+            status
         });
 
         await credorRepository.save(credor);
